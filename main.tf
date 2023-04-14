@@ -11,7 +11,7 @@ resource "hcp_azure_peering_connection" "peer" {
   peering_id               = "dev"
   peer_vnet_name           = azurerm_virtual_network.vnet.name
   peer_subscription_id     = data.azurerm_subscription.current.subscription_id
-  peer_tenant_id           = "<tenant UUID>"
+  peer_tenant_id           = var.arm_tenant_id
   peer_resource_group_name = azurerm_resource_group.rg.name
   peer_vnet_region         = azurerm_virtual_network.vnet.location
 }
