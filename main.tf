@@ -60,7 +60,7 @@ resource "azuread_service_principal" "principal" {
 }
 
 resource "azurerm_role_definition" "definition" {
-  name  = "hcp-hvn-peering-access"
+  name  = "assareh-hcp-hvn-peering-access"
   scope = azurerm_virtual_network.vnet.id
 
   assignable_scopes = [
